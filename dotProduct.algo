@@ -1,0 +1,21 @@
+PROCEDURE dot-product(v1,v2)
+VAR
+    v1 : ARRAY_OF INTEGER[];
+    v2 : ARRAY_OF INTEGER[];
+    FUNCTION dotProduct(a;b:vect) : return_INTEGER:
+    sum : INTEGER := 0;
+    VAR
+        WHILE ((a.length) = (b.length)) DO
+            FOR i FROM 1 TO a.length STEP 1  DO
+                sum := sum + a(i)*b(i);
+                i++
+            END_FOR
+        END_WHILE
+RETURN sum; 
+    BEGIN
+        Write (dotProduct(v1,v2))
+        IF (dotProduct(v1[i], v2[i]) == 0) THEN
+            Write ("v1 and v2 are orthogonal")
+        END_IF
+    END
+END
